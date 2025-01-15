@@ -1,0 +1,476 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.heading-info {
+  background-color: rgb(6, 180, 255);
+  color: black;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content,
+.ids {
+  display: grid;
+  grid-template-columns: 400px 200px 200px 200px;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.ids {
+  grid-template-columns: 400px 200px 200px 120px 120px;
+}
+
+
+
+
+.text-input,
+.date-input,
+.time-input,
+.add-task,
+.delete-task,
+.complete-task,
+.not-comp {
+  font-size: 1.2rem;
+  outline: none;
+  border: 1.5px solid black;
+  border-radius: .2rem;
+  padding: .5rem;
+}
+
+
+.add-task,
+.delete-task,
+.complete-task,
+.not-comp {
+  background-color: green;
+  color: white;
+  padding: .5rem 3rem;
+  cursor: pointer;
+}
+
+.delete-task,
+.complete-task {
+  padding: .5rem .5rem;
+}
+
+
+.delete-task,
+.not-comp {
+  background-color: red;
+}
+
+.add-task:hover,
+.complete-task:hover {
+  background-color: white;
+  color: green;
+}
+
+.delete-task:hover,
+.not-comp:hover {
+  background-color: white;
+  color: red;
+}
+
+.not-comp {
+  width: max-content;
+}
+
+.ids {
+  border-bottom: 1px solid rgb(105, 105, 105);
+  padding-bottom: 1rem;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.text-value {
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+.elements-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+}
+
+.pending,
+.done {
+  padding: 0 1rem;
+  /* color: rgb(34, 71, 255); */
+  border-right: 1px solid gray;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.pending {
+  border: none;
+}
+
+.main-not-added {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.not-added {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+  color: rgb(93, 93, 93);
+}
+
+.main-not-added {
+  display: none;
+}
+
+.colors {
+  color: rgb(34, 71, 255);
+  border-bottom: 2px solid red;
+}
+
+@media (max-width: 1200px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 400px 200px 200px 140px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 400px 100px 100px 120px 120px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 350px 160px 100px 100px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 350px 100px 100px 120px 120px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 350px;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 880px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 300px 160px 100px 100px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 300px 100px 100px 120px 100px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 300px;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 300px 160px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 300px 100px 100px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 300px;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 300px 160px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 150px 120px 100px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 150px;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 300px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 300px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 300px;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 250px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 250px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 250px;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 290px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 210px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 210px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 210px;
+  }
+
+  .heading-info {
+    font-size: 1rem;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 240px) {
+
+  .main-content,
+  .ids {
+    grid-template-columns: 180px;
+    gap: .8rem;
+  }
+
+  .ids {
+    grid-template-columns: 180px;
+  }
+
+  .add-task {
+    padding: .5rem .2rem;
+  }
+
+  .text-value {
+    width: 180px;
+  }
+
+  .heading-info {
+    font-size: 1rem;
+  }
+
+  .text-input {
+    font-size: 1rem;
+  }
+
+  .not-comp {
+    padding: .5rem .2rem;
+  }
+}
+
+.ask-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.input {
+  border: 1px solid black;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  outline: 2px solid gray;
+}
+
+.input-name {
+  font-size: 1.2rem;
+  width: 300px;
+  padding: .8rem;
+  margin-right: 10px;
+  outline: 2px solid gray;
+}
+
+.ok-click {
+  border: 1px solid black;
+  background-color: green;
+  color: black;
+  border-radius: .4rem;
+  font-size: 1.2rem;
+  padding: .8rem;
+  outline: 2px solid gray;
+  cursor: pointer;
+
+}
+
+.ok-click:hover {
+  background-color: white;
+  color: green;
+}
+
+@media (max-width: 600px) {
+  .input {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .input {
+    padding: 5rem 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .input {
+    padding: 5rem .4rem;
+  }
+
+  .input-name {
+    width: 200px;
+  }
+}
+
+@media (max-width: 340px) {
+  .input {
+    padding: 5rem .4rem;
+    display: inline-block;
+  }
+
+  .input-name {
+    width: 150px;
+  }
+
+  .ok-click {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 215px) {
+  .input {
+    padding: 5rem .4rem;
+    display: inline-block;
+  }
+
+  .input-name {
+    width: 120px;
+  }
+
+  .ok-click {
+    margin-top: 1rem;
+  }
+}
+
+.para-name {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
